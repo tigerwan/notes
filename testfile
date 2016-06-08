@@ -1,2 +1,44 @@
-345
-abc
+DIR(1)                           User Commands                          DIR(1)
+
+NAME
+       dir - list directory contents
+
+SYNOPSIS
+       dir [OPTION]... [FILE]...
+
+DESCRIPTION
+       List information about the FILEs (the current directory by default).  Sort entries alphabetically if none of -cftuvSUX nor --sort.
+
+       Mandatory arguments to long options are mandatory for short options too.
+
+       -a, --all
+              do not ignore entries starting with .
+
+       -A, --almost-all
+              do not list implied . and ..
+
+       --author
+              with -l, print the author of each file
+
+       -b, --escape
+              print octal escapes for nongraphic characters
+
+       --block-size=SIZE
+              use SIZE-byte blocks.  See SIZE format below
+
+       -B, --ignore-backups
+              do not list implied entries ending with ~
+
+       -c     with -lt: sort by, and show, ctime (time of last modification of file status information) with -l: show ctime and sort by name otherwise:
+              sort by ctime
+
+       -C     list entries by columns
+
+       --color[=WHEN]
+              colorize the output.  WHEN defaults to ‘always’ or can be ‘never’ or ‘auto’.  More info below
+
+       -d, --directory
+              list directory entries instead of contents, and do not dereference symbolic links
+
+       -D, --dired
+
