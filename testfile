@@ -1,44 +1,43 @@
-DIR(1)                           User Commands                          DIR(1)
+MV(1)                            User Commands                           MV(1)
 
 NAME
-       dir - list directory contents
+       mv - move (rename) files
 
 SYNOPSIS
-       dir [OPTION]... [FILE]...
+       mv [OPTION]... [-T] SOURCE DEST
+       mv [OPTION]... SOURCE... DIRECTORY
+       mv [OPTION]... -t DIRECTORY SOURCE...
 
 DESCRIPTION
-       List information about the FILEs (the current directory by default).  Sort entries alphabetically if none of -cftuvSUX nor --sort.
+       Rename SOURCE to DEST, or move SOURCE(s) to DIRECTORY.
 
        Mandatory arguments to long options are mandatory for short options too.
 
-       -a, --all
-              do not ignore entries starting with .
+       --backup[=CONTROL]
+              make a backup of each existing destination file
 
-       -A, --almost-all
-              do not list implied . and ..
+       -b     like --backup but does not accept an argument
 
-       --author
-              with -l, print the author of each file
+       -f, --force
+              do not prompt before overwriting
 
-       -b, --escape
-              print octal escapes for nongraphic characters
+       -i, --interactive
+              prompt before overwrite
 
-       --block-size=SIZE
-              use SIZE-byte blocks.  See SIZE format below
+       -n, --no-clobber
+              do not overwrite an existing file
 
-       -B, --ignore-backups
-              do not list implied entries ending with ~
+       If you specify more than one of -i, -f, -n, only the final one takes effect.
 
-       -c     with -lt: sort by, and show, ctime (time of last modification of file status information) with -l: show ctime and sort by name otherwise:
-              sort by ctime
+       --strip-trailing-slashes
+              remove any trailing slashes from each SOURCE argument
 
-       -C     list entries by columns
+       -S, --suffix=SUFFIX
+              override the usual backup suffix
 
-       --color[=WHEN]
-              colorize the output.  WHEN defaults to ‘always’ or can be ‘never’ or ‘auto’.  More info below
+       -t, --target-directory=DIRECTORY
+              move all SOURCE arguments into DIRECTORY
 
-       -d, --directory
-              list directory entries instead of contents, and do not dereference symbolic links
-
-       -D, --dired
+       -T, --no-target-directory
+              treat DEST as a normal file
 
